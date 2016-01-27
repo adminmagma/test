@@ -221,29 +221,11 @@ function create_config( )
     "all",
     "leave_ban"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {95876809},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
+    about_text = [[Telemega v1 - test
 
-https://github.com/SEEDTEAM/TeleSeed
-
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@Rondoozle [Developer]
-@seyedan25 [Manager]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@teleseedch [English]
-@iranseed [persian]
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -320,110 +302,87 @@ This command will send text to [group_id]
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
-Commands list :
-
-!kick [username|id]
-You can also do it by reply
-
-!ban [ username|id]
-You can also do it by reply
-
-!unban [id]
-You can also do it by reply
-
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
-
+📝 ليست دستورات مدیریتی :
+🚫 حذف کردن کاربر
+!kick [یوزنیم/یوزر آی دی]
+🚫 بن کردن کاربر ( حذف برای همیشه )
+!ban [یوزنیم/یوزر آی دی]
+🚫 حذف بن کاربر ( آن بن )
+!unban [یوزر آی دی]
+🚫 حذف خودتان از گروه
 !kickme
-Will kick user
-
+👥 دريافت ليست مديران گروه
+!modlist
+👥 افزودن مدير برای گروه
+!promote [یوزنیم]
+👥 حذف کردن یک مدير
+!demote [یوزنیم]
+📃 توضيحات گروه
 !about
-Group description
-
-!setphoto
-Set and locks group photo
-
-!setname [name]
-Set group name
-
+📜 قوانين گروه
 !rules
-Group rules
-
+🌅 انتخاب و قفل عکس گروه
+!setphoto
+🔖 انتخاب نام گروه
+!setname [نام مورد نظر]
+📜 انتخاب قوانين گروه
+!set rules <متن قوانین>
+📃 انتخاب توضيحات گروه
+!set about <متن مورد نظر>
+🔒 قفل اعضا ، نام گروه و ربات
+!lock [member|name|bots]
+🔓 باز کردن قفل اعضا ، نام گروه و ...
+!unlock [member|name|photo|bots]
+📥 دريافت یوزر آی دی گروه يا کاربر
 !id
-return group id or user id
-
+⚙ دریافت تنظیمات گروه 
+!settings
+📌 ساخت / تغيير لينک گروه
+!newlink
+📌 دريافت لينک گروه
+!link
+🛃 انتخاب مدير اصلی گروه
+!setowner [یوزر آی دی]
+🔢 تغيير حساسيت ضد اسپم
+!setflood [5-20]
+✅ دريافت ليست اعضا گروه
+!who
+✅ دريافت آمار در قالب متن
+!stats
+〽️ سيو کردن يک متن
+!save [value] <text>
+〽️ دريافت متن سيو شده
+!get [value]
+❌ حذف قوانين ، مديران ، اعضا و ...
+!clean [modlist|rules|about]
+♻️ دريافت يوزر آی دی یک کاربر
+!res [یوزنیم]
+🚸 دريافت گزارشات گروه
+!log
+🚸 دريافت ليست کاربران بن شده
+!banlist
+🌀 تکرار متن مورد نظر شما
+!echo [متن]
+🃏 ساخت متن نوشته
+!tex [متن]
+🃏 ساخت QR بارکد
+!qr [متن]
+⌨ انجام محاسبات ریاضی
+!calc 2+8
+🌐 جستجو در ویکی پديا انگلیسی
+!wiki [متن]
+🌐 جستجو در ویکی پديا فارسی
+!wikifa [متن]
+📢 ارتباط با پشتیبانی ربات
+!feedback [متن پیام]
+💬 راهنمای ربات (همین متن)
 !help
 
-!lock [member|name|bots|leave]	
-Locks [member|name|bots|leaveing] 
+⚠️  شما ميتوانيد از ! و / استفاده کنيد. 
+⚠️  تنها مديران ميتوانند ربات ادد کنند. 
+⚠️  تنها معاونان و مديران ميتوانند 
+جزييات مديريتی گروه را تغيير دهند.
 
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
-!set rules <text>
-Set <text> as rules
-
-!set about <text>
-Set <text> as about
-
-!settings
-Returns group settings
-
-!newlink
-create/revoke your group link
-
-!link
-returns group link
-
-!owner
-returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
-
-!stats
-Simple message statistics
-
-!save [value] <text>
-Save <text> as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-returns user id
-"!res @username"
-
-!log
-will return group logs
-
-!banlist
-will return group ban list
-
-**U can use both "/" and "!" 
-
-
-*Only owner and mods can add bots in group
-
-
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only owner can use res,setowner,promote,demote and log commands
 
 ]]
   }
