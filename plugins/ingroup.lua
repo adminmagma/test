@@ -17,6 +17,13 @@ local function check_member_autorealm(cb_extra, success, result)
           lock_photo = 'no',
           lock_member = 'no',
           flood = 'yes'
+          lock_tag = 'no'
+          lock_sticker= 'no'
+          lock_chat='no'
+          lock_farsi='no'
+          lock_lave='no'
+          lock_fosh='no'
+          
         }
       }
       save_data(_config.moderation.data, data)
